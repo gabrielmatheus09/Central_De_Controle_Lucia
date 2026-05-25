@@ -6,6 +6,10 @@ void limpar(){
     int c;
     while((c = getchar()) != '\n' && c !=EOF);
 }
+void troca(char str[])
+{
+    str[strcspn(str, "\n")] = '\0';
+}
 struct Operador
 {
     int id;
@@ -42,7 +46,17 @@ void Cadastrar(struct Operador absolute_proletariado[])
     printf("Nome do operador: ");
     limpar();
     fgets(absolute_proletariado[i-1].nome, 70, stdin);
-
+    troca(absolute_proletariado[i-1].nome);
+    printf("Setor do operador: ");
+    limpar();
+    fgets(absolute_proletariado[i-1].setor, 5, stdin);
+    troca(absolute_proletariado[i-1].setor);
+    printf("Nivel Operacional(1 - basico // 2 - intermediario // 3 - supervisor tecnico): ");
+    scanf("%d", &absolute_proletariado[i-1].nivel);
+    printf("Status do operador(1 - ativo(disponivel) // 2 - ocupado // 3 - inativo(fora de operacao) // 4 - bloqueado(temporareamente indisponivel): ");
+    scanf("%d", &absolute_proletariado[i-1].status);
+    printf("Quantidade de operacoes realizadas: ");
+    scanf("%d", &absolute_proletariado[i-1].quant);
 }
 int main(){
     struct Operador absolute_proletariado[50];
@@ -52,7 +66,13 @@ int main(){
         printf("| _ ) __|  \\/  | \\ \\ / /_ _| \\| |   \\ / _ \\| |\n");
         printf("| _ \\ _|| |\\/| |  \\ V / | || .` | |) | (_) |_|\n");
         printf("|___/___|_|  |_|   \\_/ |___|_|\\_|___/ \\___/(_)\n\n");
-        printf("Escreva qual ação deseja realizar: ")
+        printf("1 - Cadastrar Operador\n");
+        printf("2 - Cadastrar Equipamento\n");
+        printf("3 - Atualizar Sistema\n");
+        printf("4 - Consultar Registros\n");
+        printf("5 - Relatorios Operacionais\n");
+        printf("6 - Fechar Programa\n");
+        printf("Escreva qual acao deseja realizar entre as opcoes acima: ");
         scanf("%d",&menu);
         switch(menu){
             case 1:
@@ -81,11 +101,8 @@ int main(){
 
             case 6:
             printf("");
-
             break;
 
         }
     }while(menu != 6);
-
-
 }
