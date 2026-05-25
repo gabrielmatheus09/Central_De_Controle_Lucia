@@ -30,11 +30,21 @@ int main(){
     int menu, i;
     setlocale(LC_ALL, "portuguese");
     do{
-        printf("Oi: ");
+        printf(" ___ ___ __  __  __   _____ _  _ ___   ___  _ \n");
+        printf("| _ ) __|  \\/  | \\ \\ / /_ _| \\| |   \\ / _ \\| |\n");
+        printf("| _ \\ _|| |\\/| |  \\ V / | || .` | |) | (_) |_|\n");
+        printf("|___/___|_|  |_|   \\_/ |___|_|\\_|___/ \\___/(_)\n");
         scanf("%d",&menu);
         switch(menu){
             case 1:
-            printf("Escreva qual número registrar: ");
+            printf("  ___   _   ___   _   ___ _____ ___  ___    ___  ___ \n");
+            printf(" / __| /_\\ |   \\ /_\\ / __|_   _| _ \\/ _ \\  |   \\| __|\n");
+            printf("| (__ / _ \\| |) / _ \\\\__ \\ | | |   / (_) | | |) | _| \n");
+            printf(" \\___/_/ \\_\\___/_/ \\_\\___/_|_| |_|_\\\\___/__|___/|___|\n");
+            printf(" / _ \\| _ \\ __| _ \\  /_\\ |   \\ / _ \\| _ \\ __/ __|    \n");
+            printf("| (_) |  _/ _||   / / _ \\| |) | (_) |   / _|\\__ \\    \n");
+            printf(" \\___/|_| |___|_|_\\/_/ \\_\\___/ \\___/|_|_\\___|___/    \n");
+            printf("Escreva qual nÃºmero registrar: ");
             scanf("%d", &i);
             printf("Cadastro de Operadores\n");
             printf("ID do operador: ");
